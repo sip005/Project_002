@@ -15,7 +15,7 @@
 - ls
 - cd dcrm
 - nvim settings.py
-  - Add website to installed apps
+- Add website to installed apps
     ```
     # Application definition
 
@@ -29,8 +29,24 @@
          'website',
                        ]
 ```
-  - Add website to installed apps
-  - Make changes to the database section
+- 
+
+- Add website to installed apps
+- Make changes to the database section
+--
+- install mysql
+- pip install mysql-connector-python
+- pip install mysql-connector
+- django-admin startproject dcrm
+- tree -L 3
+- cd dcrm
+- cd dcrm
+- python3 manage.py startapp website
+- ls
+- cd dcrm
+- nvim settings.py
+- Add website to installed apps
+
 ```
      DATABASES = {
          'default': {
