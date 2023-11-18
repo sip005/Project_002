@@ -27,19 +27,19 @@
          'django.contrib.messages',
          'django.contrib.staticfiles',
          'website',
-                    ]
+                       ]
 ```
   - Make changes to the database section
   ```
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'elderco',
-        'USER': 'root',
-        'PASSWORD': '1234',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
+     DATABASES = {
+         'default': {
+             'ENGINE': 'django.db.backends.mysql',
+             'NAME': 'elderco',
+             'USER': 'root',
+             'PASSWORD': '1234',
+             'HOST': 'localhost',
+             'PORT': '3306',
+                   }
+               }
   ```
-- Add website to installed apps
+
