@@ -1,5 +1,3 @@
-Sure, I'll format the steps and code snippets in a more organized way using proper markdown syntax:
-
 ### Steps - 18/11/23
 
 1. Create a directory and navigate into it:
