@@ -29,10 +29,9 @@
          'website',
                        ]
 ```
-
+  - Add website to installed apps
   - Make changes to the database section
-
-  ```
+```
      DATABASES = {
          'default': {
              'ENGINE': 'django.db.backends.mysql',
