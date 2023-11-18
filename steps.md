@@ -15,7 +15,8 @@
 - ls
 - cd dcrm
 - nvim settings.py
-  - Add website to installed apps
+  - Add website to installed apps  
+    
     ```
     # Application definition
 
@@ -29,7 +30,9 @@
          'website',
                        ]
 ```
+
   - Make changes to the database section
+
   ```
      DATABASES = {
          'default': {
