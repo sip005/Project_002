@@ -16,7 +16,7 @@
 - cd dcrm
 - nvim settings.py
 - Add website to installed apps
-    ```
+    `
     # Application definition
 
      INSTALLED_APPS = [
@@ -28,7 +28,7 @@
          'django.contrib.staticfiles',
          'website',
                        ]
-```
+`
 - 
 
 - Add website to installed apps
