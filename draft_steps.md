@@ -32,5 +32,14 @@ print("All Done!")
 - python3 manage.py createsuperuser
  - name root
  - password toor
+- 
+-
+- make changes to
+# settings.py
+
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '192.168.1.25']
+
 - python3 manage.py runserver
+- python3 manage.py runserver 0.0.0.0:8080
+- make changes to dcrm/urls.py
 - 
