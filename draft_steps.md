@@ -114,3 +114,53 @@ def home(request):
 - make changes accordingly to the navbar.html
 
 
+
+
+- view.py
+```
+def home(request):
+    # Retrieve all records from the Record model
+    records = Record.objects.all()
+
+    # Check if the request method is POST (form submission for login)
+    if request.method == 'POST':
+        # Retrieve username and password from the POST request
+        username = request.POST['username']
+        password = request.POST['password']
+
+        # Authenticate user using Django's authentication system
+        user = authenticate(request, username=username, password=password)
+
+        # Check if the user is authenticated successfully
+        if user is not None:
+            # Log in the authenticated user
+            login(request, user)
+            # Display success message upon successful login
+            messages.success(request, "You Have Been Logged In!")
+            # Redirect to the 'home' page
+            return redirect('home')
+        else:
+            # Display error message if login fails
+            messages.success(request, "There Was An Error Logging In, Please Try Again...")
+            # Redirect to the 'home' page
+            return redirect('home')
+    else:
+        # If request method is not POST (GET request), render the home page
+        return render(request, 'home.html', {'records': records})
+
+# Markdown Explanation:
+# 1. **Retrieve Records:** Fetches all records from the `Record` model using `Record.objects.all()`.
+# 2. **Check Request Method:** Determines if the incoming request is a POST request (typically from a login form submission).
+# 3. **Authenticate User:**
+#    - Retrieves the `username` and `password` from the POST data.
+#    - Uses Django's built-in `authenticate` function to verify the user's credentials.
+#    - If authentication succeeds, logs in the user using `login(request, user)`.
+# 4. **Handle Authentication Result:**
+#    - If authentication is successful, a success message is added using Django's `messages.success` and redirects the user to the 'home' page.
+#    - If authentication fails, an error message is added using `messages.error` and redirects back to the 'home' page.
+# 5. **Render Home Page:** If the request method is not POST (GET request), renders the 'home.html' template with the retrieved records.
+```
+
+--
+
+
